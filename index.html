@@ -11,36 +11,46 @@
     </head>
     <body>
         <nav class="main-nav">
-            <h2 class="main-nav__headings">Brand Guide</h2>
+            <a href='#brandguide'><h2 class="main-nav__headings">Brand Guide</h2></a>
             <ul>
                 <li class="main-nav__content"><a href="#einleitung" class="main-nav__links">Einleitung</a></li>
                 <li class="main-nav__content"><a href=#farben class="main-nav__links">Farben</a></li>
             </ul>
-            <h2 class="main-nav__headings">CSS-Methodologie</h2>
+            <a href='#methodology'><h2 class="main-nav__headings">CSS-Methodologie</h2></a>
             <ul>
                 <li class="main-nav__content"><a href="#code-konventionen" class="main-nav__links">Code-Konventionen</a></li>
                 <li class="main-nav__content"><a href="#class-konventionen" class="main-nav__links">Class-Naming-Konvention</a></li>
             </ul>
-            <h2 class="main-nav__headings">Component-Library</h2>
+            <a href='#components'><h2 class="main-nav__headings">Component-Library</h2></a>
             <ul>
                 <li class="main-nav__content"><a href="#server-leiste" class="main-nav__links">Server-Leiste</a></li>
                 <li class="main-nav__content"><a href="#warteschlange" class="main-nav__links">Warteschlange</a></li>
                 <li class="main-nav__content"><a href="#musikbar" class="main-nav__links">Musikbar</a></li>
                 <li class="main-nav__content"><a href="#chat" class="main-nav__links">Chat</a></li>
+                <li class="main-nav__content"><a href="#buttons" class="main-nav__links">Buttons</a></li>
+                <li class="main-nav__content"><a href="#links" class="main-nav__links">Links</a></li>
+            </ul>
+            <a href='#typography'><h2 class="main-nav__headings">Typographie</h2></a>
+            <ul>
+                <li class="main-nav__content"><a href="#typography-h" class="main-nav__links">Überschriften</a></li>
+                <li class="main-nav__content"><a href="#typography-p" class="main-nav__links">Paragraphen</a></li>
             </ul>
         </nav>
+
         <div class="overview">
             <div class="logoheading">
                 <img src="images/radioquad.png" alt="youradio logo">
                 <h1>YOURADIO</h1>
             </div>
-            <section class="brandguide">
+
+            <section class="brandguide" id='brandguide'>
                 <h2 class="overview__headings">Brandguide YouRadio</h2>
                 <p class="overview__text">YouRadio ist eine Applikation, in der man sich seinen eigenen “Radiosender”
                 gemeinsam mit anderen Menschen erstellen kann, um mit denen den Konsum von Audio genießen
                 zu können. Die Playlist wird von den Mitgliedern des “Radiosender”-Servers verwaltet. 
                 “Radiosender” besser definiert: ein Server, auf dem eine Playlist von Liedern und Sprachnachrichten in Realtime abgespielt wird.
                 </p>
+
                 <section id="einleitung">
                     <h3 class="overview__sub-headings">Einleitung</h3>
                     <p class="overview__text">Dies ist der Styleguide für das Web-Projekt YouRadio. Er beinhaltet neben den zu wählenden Farben, auch
@@ -48,6 +58,7 @@
                     Des Weiteren werden Code- und Styling Beispiele von elementaren Komponenten dargestellt.
                     </p>
                 </section>
+
                 <section id="farben">
                     <h3 class="overview__sub-headings">Farben</h3>
                     <p class="overview__text">Für das Projekt YouRadio sind folgende Farben zu verwenden</p>
@@ -86,13 +97,12 @@
                             <span class="colors__dot colors__dot--color6"></span>
                             <h4 class="colors__heading">#FFFFFF</h4>
                             <p class="colors__text">Diese Farbe wird für Texte verwendet</p>
-                        </div>
-                        
-                        
+                        </div> 
                     </div>
-                </section>
+                </section>     
             </section>
-            <section class="css-methologie">
+
+            <section class="methodology" id='methodology'>
                 <h2 class="overview__headings">CSS-Methodologie</h2>
                 <p class="overview__text">Im Projekt YouRadio wird zum strukturierten Aufbau des CSS BEM angewandt. Was bedeutet das? BEM steht für Block, Element, Modifier.
                 Blöcke sind HTML-Einheiten die unabhängig von ihrem Einsatzort existieren. Beispiele dafür sind "header" oder "footer". Elemente dagegen sind 
@@ -109,7 +119,7 @@
                 </p>
                 <section id="code-konventionen">
                     <h3 class="overview__sub-headings">Code-Naming-Konventionen</h3>
-                    <h4>Preprocessor, File-Struktur und CSS-Reset</h4>
+                    <h4>Preprocessor, File-Struktur und CSS-Normalize</h4>
                     <p class="overview__text">Im Projekt YouRadio wird SASS/SCSS verwendet. Es wird das 7-1 Pattern angewandt um das SCSS zu strukturieren. Das bedeutet es
                             gibt die Ordner "base, components, layout, pages, themes, abstracts und vendors". Die Files werden dann in einer 
                             main.scss gesammelt.<br><br> Es wird CSS-Normalize angewandt um eine gemeinsame Basis für Styling zu schaffen.</p>
@@ -118,7 +128,7 @@
                     <h3 class="overview__sub-headings">Class-Naming-Konventionen</h3>
                     <p class="overview__text">Klassen werden grundsätzlich klein geschrieben und englisch benannt.</p>
                     <h4>Block</h4>
-                    <p class="overview__text">Ein Block ist eine alleinstehendes Entity, die nicht von anderen Elementen abhängt.</p>
+                    <p class="overview__text">Ein Block ist ein alleinstehendes Entity, das nicht von anderen Elementen abhängt.</p>
                     <table class="naming-table">
                         <tr>
                             <th class="naming-table__head">Naming</th>
@@ -130,10 +140,10 @@
                                 Blöcke werden klein geschrieben. Dabei wird darauf geachtet, dass keine "__" im Namen vorkommen.
                             </td>
                             <td class="naming-table__data">
-                                Jeder DOM-Knoten, der eine Klasse besitzt kann ein Block sein. Wichtig es werden zum stylen nur Klassen vergeben.
+                                Jeder DOM-Knoten, der eine Klasse besitzt kann ein Block sein. Wichtig, es werden zum stylen nur Klassen vergeben.
                             </td>
                             <td class="naming-table__data">
-                                Die Blöcke werden ausschließlich mit Klassennamen angesprochen. Es ist wichtig, dass beim styling weder CSS, noch
+                                Die Blöcke werden ausschließlich mit Klassennamen angesprochen. Es ist wichtig, dass beim Styling weder CSS, noch
                                 Tags verwendet werden.
                             </td>
                         </tr>
@@ -169,7 +179,7 @@
                         </tr>
                     </table>
                     <h4>Modifier</h4>
-                    <p class="overview__text">Modifier sind Flags an Elementn oder Blöcken, die deren Aussehen oder Zustand verändern.</p>
+                    <p class="overview__text">Modifier sind Flags an Elementen oder Blöcken, die deren Aussehen oder Zustand verändern.</p>
                     <table class="naming-table">
                         <tr>
                             <th class="naming-table__head">Naming</th>
@@ -201,137 +211,241 @@
                     </table>
                 </section>
             </section>
-            <section class="component-library">
+
+            <section class="component-library" id='components'>
                 <h2 class="overview__headings">Component-Library</h2>
                 <section id="server-leiste">
                     <h3 class="overview__sub-headings">Serverleiste</h3>
                     <table class="server-table">
                         <tr class="server-table__row">
-                            <th class="server-table__heading-1">Design</th>
-                            <th class="server-table__heading">Beschreibungen & Code-Beispiel</th>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr class="server-table__row">
                             <td>
                                 <div class="server-leiste">
-                                    <buttons class="server-leiste__home"><i class="server-leiste__home-icon fas fa-home fa-lg"></i></buttons>
-                                    <buttons class="server-leiste__dot"></buttons>
-                                    <buttons class="server-leiste__dot server-leiste__dot--active"></buttons>
-                                    <buttons class="server-leiste__dot"></buttons>
-                                    <buttons class="server-leiste__dot"></buttons>
-                                    <buttons class="server-leiste__add"><i class="server-leiste__add-icon fas fa-plus fa-lg"></i></buttons>
+                                    <a href='#server-leiste' class="server-leiste__home"><i class="server-leiste__home-icon fas fa-home fa-lg"></i></a>
+                                    <a href='#server-leiste' class="server-leiste__dot"></a>
+                                    <a href='#server-leiste' class="server-leiste__dot server-leiste__dot--active"></a>
+                                    <a href='#server-leiste' class="server-leiste__dot"></a>
+                                    <a href='#server-leiste' class="server-leiste__dot"></a>
+                                    <a href='#server-leiste' class="server-leiste__add"><i class="server-leiste__add-icon fas fa-plus fa-lg"></i></a>
                                 </div>
                             </td>
-                            <td class="server-table__data">Wichtige Merkmale für die Serverleiste: Die Farbkombinationen sind wie im Bereich Farben einzuhalten. Die dunkel Buttons werden im Use-Case mit Nutzerbildern gefüllt.
-                                Der aktuelle Server wird mit einer helgrünen Border (Active State) am linken Rand gekennzeichnet. Die Buttons haben keinen Hover-State.
+                            <td class="server-table__data"><p>Wichtige Merkmale für die Serverleiste: Die Farbkombinationen sind wie im Bereich Farben einzuhalten. Die dunklen Buttons werden im Use-Case mit Nutzerbildern gefüllt.
+                                Der aktuelle Server wird mit der hellgrünen Akzentfarbe umrandet (active state). Die Buttons haben keinen Hover-State.</p>
                                 <div class="codepen">
-                                    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="web-valentin" data-slug-hash="XWNJJYp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="XWNJJYp">
-                                        <span>See the Pen <a href="https://codepen.io/web-valentin/pen/XWNJJYp">
-                                        XWNJJYp</a> by web-valentin (<a href="https://codepen.io/web-valentin">@web-valentin</a>)
+                                    <p class="codepen" data-height="366" data-theme-id="dark" data-default-tab="html,result" data-user="izzyyhh" data-slug-hash="oNYLLPM" style="height: 366px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="oNYLLPM">
+                                        <span>See the Pen <a href="https://codepen.io/izzyyhh/pen/oNYLLPM">
+                                        oNYLLPM</a> by izzyyhh (<a href="https://codepen.io/izzyyhh">@izzyyhh</a>)
                                         on <a href="https://codepen.io">CodePen</a>.</span>
                                       </p>
-                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                                 </div>
                             </td>
                         </tr>
                     </table>
                 </section>
                 <section id="warteschlange">
-                    <h3 class="overview__sub-headings">Warteschlange</h3>
+                    <h3 class="overview__sub-headings">Liste - Warteschlange</h3>
                     <table class="server-table">
                         <tr class="server-table__row">
-                            <th class="server-table__heading-1">Design</th>
-                            <th class="server-table__heading">Beschreibungen & Code-Beispiel</th>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr class="server-table__row">
                             <td>
-                                <div class="playlist">
-                                    <buttons class="playlist__name">Playlistname<i class="server-leiste__home-icon fas fa-arrow-down"></i></buttons>
-                                    <buttons class="playlist__main"><i class="playlist__icon fas fa-list-ul"></i>Warteschlange</buttons>
-                                    <buttons class="playlist__song"><i class="playlist__icon fas fa-music"></i>Interpret - Titel<span class="playlist__song--next">next</span></buttons>
-                                    <buttons class="playlist__song"><i class="playlist__icon fas fa-music"></i>Interpret - Titel</buttons>
-                                    <buttons class="playlist__song"><i class="playlist__icon fas fa-music"></i>Interpret - Titel</buttons>
-                                    <buttons class="playlist__song"><i class="playlist__icon fas fa-music"></i>Interpret - Titel</buttons>
+                                <div class='playlist'>
+                                    <div class="playlist__name"><span class="playlist__helper">Servername</span></div>
+                                    <div class="playlist__main"><i class="playlist__icon fas fa-list"></i>Playlist</div>
+                                    <ul class='playlist__tracklist'>
+                                      <li class="playlist__song"><i class="playlist__icon fas fa-music" aria-hidden="true"></i>Eminem - Godzilla ft. Juice WRLD (Directed by Cole Bennett)</li>
+                                            <li class="playlist__song"><i class="playlist__icon fas fa-music" aria-hidden="true"></i>Billie Eilish - Ocean Eyes</li>
+                                            <li class="playlist__song"><i class="playlist__icon fas fa-music" aria-hidden="true"></i>Torikago トリカゴ - XX:me (Lyrics) (Darling In the Franxx opening)</li>
+                                    </ul>
                                 </div>
                             </td>
-                            <td class="server-table__data">Wichtige Merkmale bei der Warteschlange: Die Farbkombinationen sind so wie im Beispiel zu wählen. Der nächste Titel hat einen next-state. Dabei erscheint ein kleines next
-                                neben dem Titel. Die Songs in der Playlist haben einen Hover-State. Die Plalist ist Drop-Down. Bei einem klick auf den
-                                Playlistnamen verschwindet die Playlist. Diese Funktionalität ist mit JS zu implementieren.
+                            <td class="server-table__data"><p>Wichtige Merkmale der Warteschlange: Die Farbkombinationen sind so wie im Beispiel zu wählen. Der nächste Titel kann einen next-state haben. Dabei erscheint ein kleines next
+                                neben dem Titel. Die Songs in der Playlist haben keinen Hover-State.</p>
                                 <div class="codepen">
-                                    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css" data-user="web-valentin" data-slug-hash="WNobbKe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="WNobbKe">
-                                        <span>See the Pen <a href="https://codepen.io/web-valentin/pen/WNobbKe">
-                                        WNobbKe</a> by web-valentin (<a href="https://codepen.io/web-valentin">@web-valentin</a>)
+                                    <p class="codepen" data-height="536" data-theme-id="dark" data-default-tab="css,result" data-user="izzyyhh" data-slug-hash="rNWLMxJ" style="height: 536px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="rNWLMxJ">
+                                        <span>See the Pen <a href="https://codepen.io/izzyyhh/pen/rNWLMxJ">
+                                        rNWLMxJ</a> by izzyyhh (<a href="https://codepen.io/izzyyhh">@izzyyhh</a>)
                                         on <a href="https://codepen.io">CodePen</a>.</span>
                                       </p>
-                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                                 </div>
                             </td>
                         </tr>
                     </table>
                 </section>
-                <div id="musikbar">
-                    <h3 class="overview__sub-headings">Musikbar</h3>
-                    <div class="musikbar">
-                        <div class="musikbar__title-cover">
-                            <span class="musikbar__cover"><i class="musikbar__icon fas fa-music"></i></span>
-                            <div class="musikbar__titel">
-                                <div class="musikbar__titel-now">Interpret-Titel</div>
-                                <div class="musikbar__titel-next">next: Interpret-Titel</div>
+                <section id='musikbar'>
+                <h3 class="overview__sub-headings">Musikbar - Hauptinteraktionsleiste</h3>
+
+                <div class="musicbar">
+                    <div class="musicbar__title-cover">
+                        <div class="musicbar__cover"><i class="musicbar__icon fas fa-music"></i></div>
+                        <div class="musicbar__titel">
+                            <div id='marquee'>
+                                <div class="musicbar__titel-now">Interpret-Titel</div>
                             </div>
+                            <div class="musicbar__titel-next">-next: Interpret-Titel</div>
                         </div>
-                        <div class="musikbar__main">
-                            <div class="musikbar__buttons">
-                                <button class="musikbar__speach"><i class="fas fa-microphone-alt"></i></button>
-                                <button class="musikbar__link"><i class="fas fa-plus fa-lg"></i></button>
-                                <button class="musikbar__search"><i class="fas fa-search"></i></button>
-                            </div>
-                            <div class="musikbar__bar">
-                                <div class="musikbar__runtime">0.54</div>
-                                <div class="musikbar__run"></div>
-                                <div class="musikbar__end"></div>
-                                <div class="musikbar__endtime">3.23</div>
-                            </div>
-                        </div>
-                            <div class="musikbar__sound">
-                                <i class="fas fa-volume-up"></i>
-                                <div class="musikbar__soundnow"></div>
-                                <div class="musikbar__soundmax"></div>
-                            </div>
                     </div>
-                </div>
-                <p class="overview__text">Bei der Musikbar ist es wichtig die Farbkonventionen einzuhalten. Sowie die richtige Verwendung der Icons. Bei Klick auf den Lautsprecher ändert der Lautsprecher sich in einen Mute-State.</p>
-                <div class="codepen">
-                    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css" data-user="web-valentin" data-slug-hash="ExNaaeX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ExNaaeX">
-                        <span>See the Pen <a href="https://codepen.io/web-valentin/pen/ExNaaeX">
-                        ExNaaeX</a> by web-valentin (<a href="https://codepen.io/web-valentin">@web-valentin</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                      </p>
-                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                </div>
+                
+                    <div class="musicbar__main">
+                        <div class="musicbar__buttons">
+                            <button class="musicbar__speach"><i class="fas fa-microphone-alt"></i></button>
+                            <button class="musicbar__link"><i class="fas fa-plus fa-lg"></i></button>
+                            <button class="musicbar__search"><i class="fas fa-search"></i></button>
+                        </div>
+                
+                        <div class="musicbar__bar">
+                            <div class="musicbar__runtime">0:00</div>
+                            <div class="musicbar__run"></div>
+                            <div class="musicbar__end"></div>
+                            <div class="musicbar__endtime">0:00</div>
+                        </div>
+                    </div>
+                
+                    <div class="musicbar__sound">
+                        <div id="sound__icon">
+                            <i class="fas fa-volume-mute"></i>
+                        </div>
+                        <div>
+                            <input type="range" id="sound__range" min="0" max="100" value="0" step="1">
+                        </div>
+                    </div>
+                </div>  
+                <br>
+                <p class="overview__text">Ganz wichtig bei der Musikbar sind die Buttons. Sie sollen wie ersichtlich gestylt werden und zentiert in der Bar sein. Die grüne Akzentfarbe ist von Bedeutung!</p>
+                <p class="overview__text">Bei der Musikbar ist es wichtig die Farbkonventionen einzuhalten. Sowie die richtige Verwendung der Icons. Bei Klick auf den Lautsprecher ändert der Lautsprecher sich in einen Mute-State. Wenn der Regler betätigt wird und die Musik dadurch nicht mehr gemutet ist, muss dementsprechend das Icon verändert werden. Das muss mit JavaScript implementiert werden. Ein gutes Beispiel sehen Sie auf unserer Page. <a href='https://youradio.projects.multimediatechnology.at/'>Zu youradio &rarr; </a></p>
+                <br>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html" data-user="izzyyhh" data-slug-hash="NWbrbyL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="musicbar youradio">
+                    <span>See the Pen <a href="https://codepen.io/izzyyhh/pen/NWbrbyL">
+                    musicbar youradio</a> by izzyyhh (<a href="https://codepen.io/izzyyhh">@izzyyhh</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
                 </section>
+
                 <section id="chat">
                     <h3 class="overview__sub-headings">Chat</h3>
                     <div class="chat">
-                        <h2 class="chat__heading">Radio Chat Section</h2>
-                        <div class="chat__user"><span class="chat__img"></span><span class="chat__username chat__username--current">Username</span></div>
-                        <div class="chat__message">Chat-MessageChat-MessageChat-MessageChat-MessageChat-Message</div>
-                        <div class="chat__user"><span class="chat__img"></span><span class="chat__username">Username</span></div>
-                        <div class="chat__message">Chat-MessageChat-MessageChat-Message</div>
-                        <div class="chat__user"><span class="chat__img"></span><span class="chat__username">Username</span></div>
-                        <div class="chat__message">Chat-MessageChat-MessageChat-MessageChat-MessageChat-MessageChat-Message</div>
-                        <div class="chat__user"><span class="chat__img"></span><span class="chat__username">Username</span></div>
-                        <div class="chat__message">Chat-Message</div>
-                        <input type="text" class="chat__add" value="Type Text">
+                        <h2 class="chat__heading">Servername Chat</h2>
+                        <div id='server-messages'>
+                          
+                          <div class="chat__user">
+                            <span class="chat__img"><img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256_960_720.png" alt='profile pic'></span>
+                            <span class="chat__username--current">valentin</span>
+                          </div>
+                          <div class="chat__message">hi</div>
+                          
+                          <div class="chat__user">
+                            <span class="chat__img"><img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256_960_720.png" alt='profile pic'></span>
+                            <span class="chat__username">izzy</span>
+                          </div>
+                          <div class="chat__message">moinsen</div>
+                          
+                          <div class="chat__user">
+                            <span class="chat__img"><img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256_960_720.png" alt='profile pic'></span>
+                            <span class="chat__username">izzy</span>
+                          </div>
+                          <div class="chat__message">Die Musik, die gerade läuft ist echt gut!</div>           
+                        </div>
+                    
+                        <form class="new_chatmessage" id="new_chatmessage" action="/chatmessages" accept-charset="UTF-8" data-remote="true" method="post">
+                            <div class="field">
+                                <input value="" type="hidden" name="chatmessage[username]" id="chatmessage_username">
+                            
+                                
+                                <input id="content-input" class="chat__add" placeholder="type..." autocomplete="off" type="text" name="chatmessage[content]">
+                            </div>
+                            
+                            <input value="5" type="hidden" name="chatmessage[server_id]" id="chatmessage_server_id">
+                            
+                            <div class="actions">
+                                <input type="submit" name="commit" value="Submit" class="style__hide" id="send-message-button">
+                            </div>
+                        </form>
                     </div>
-                    <p class="overview__text">Bei der Chat-Section ist es wichtig auf den Einsatz der Fraben zu achten. Die grauen Kreise werden mit den Bildern der User gefüllt. Die Input-Leiste reagiert auf "Enter"</p>
+                    <br>
+                    <p class="overview__text">Bei der Chat-Section ist es wichtig auf den Einsatz der Farben zu achten. Die Hintergrundfarbe ist die gleiche wie von der jetzigen Seite. Der eingeloggte User wird in der grünen Akzentfarbe angezeigt, die anderen in der blauen. Die Kreise werden mit den Bildern der User gefüllt. Die Input-Leiste reagiert auf "Enter". Die Schriftfarbe in dem Inputfeld ist weiß, der Placeholder in der blauen Akzentfarbe aber mit etwas Transparenz. Das Input-Feld befindet sich in einem Form-Tag.</p>
+                    <br>
                     <div class="codepen">
-                            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css" data-user="web-valentin" data-slug-hash="OJbJKLE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="OJbJKLE">
-                                    <span>See the Pen <a href="https://codepen.io/web-valentin/pen/OJbJKLE">
-                                    OJbJKLE</a> by web-valentin (<a href="https://codepen.io/web-valentin">@web-valentin</a>)
-                                    on <a href="https://codepen.io">CodePen</a>.</span>
-                                  </p>
-                                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css" data-user="izzyyhh" data-slug-hash="BaQzpQb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="BaQzpQb">
+                            <span>See the Pen <a href="https://codepen.io/izzyyhh/pen/BaQzpQb">
+                            BaQzpQb</a> by izzyyhh (<a href="https://codepen.io/izzyyhh">@izzyyhh</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                          </p>
+                          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                     </div>
-                </section>                
+                </section>
+                <section id='buttons'>
+                    <h3 class="overview__sub-headings">Buttons</h3>
+                    <p class="overview__text">Die wichtigsten Buttons wurden bereits in der Musikbar präsentiert. Nun folgen weitere für die Web-Anwendung übliche Buttons. Wichtig ist es, die festgelegten Farbe zu verwenden.</p>
+                    <div class='codepen'>
+                        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="izzyyhh" data-slug-hash="zYoBZKa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="button">
+                            <span>See the Pen <a href="https://codepen.io/izzyyhh/pen/zYoBZKa">
+                            button</a> by izzyyhh (<a href="https://codepen.io/izzyyhh">@izzyyhh</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                </section>
+                <section id='links'>
+                    <h3 class="overview__sub-headings">Links</h3>
+                    <p class='overview__text'>Für die Links müssen die Akzentfarben verwendet werden. Mit der gleichen Schriftart wie für den Text. Der Text bleibt in seiner üblichen Stärke (kein 'lighter'). Das underline-Attribut ist optional.</p>
+                    <p class='overview__text'><b>Beispiele</b></p>
+                    <a class='youradio-link--blue' href="https://youradio.projects.multimediatechnology.at/">ein link auf youradio</a>
+                    <br>
+                    <a class='youradio-link--green' href="https://youradio.projects.multimediatechnology.at/">ein weiterer link auf youradio</a>
+                </section>       
+            </section>       
+            <section id='typography'>
+                <h2 class="overview__headings">Typographie</h2>
+                <section id="typography-h">
+                    <h3 class="overview__sub-headings">Überschriften</h3>
+                    <p>Überschriften können in 2 Kategorien eingeteilt werden. Sehr wichtige Überschriften (global wichtig), so wie der Name des Unternehmens, der Name der Webpage oder dergleichen. Und dann gibt es lokal wichtige Überschriften, zum Beispiel eine Überschrift für den Absatz, oder der Name einer Unterseite.</p>
+                    <br>
+                    <p>Wie Sie auf dieser Seite sehen können gibt es nur eine sehr wichtige Überschrift, dass is der H1-Tag ganz oben neben dem Logo "YOURADIO" (der Name des Projekts). Die anderen Überschriften sowie "Typographie" vermerken wir als lokal wichtige Überschriften.</p>
+                    <br>
+                    <ul>
+                        <li>Schriftart: <b>Rokkitt, serif, 800-900</b> für globale Signifikanz</li>
+                        <li>Schriftart: <b>Open Sans, sans-serif, Bold</b> für lokale Signifikanz</li>
+                    </ul>
+                    <br>
+                    <b>Beispiele:</b>
+                    <br>
+                    <br>
+                    <p class='rokkitt'>Rokkitt, 900</p>
+                    <p class='heading1'>Global, 52px</p>
+                    <h2 class="overview__headings">Lokal, 48px</h2>
+                </section>
+                <br>
+                <section id="typography-p">
+                    <h3 class="overview__sub-headings">Paragraphen</h3>
+                    <p>
+                        Für Text wird die Schriftart <b>Open Sans</b> verwendet. Die Schriftgröße ist bei einem rem auf 16px. Für die Stärke der Schrift können Sie sich zwischen "lighter" und "normal" entscheiden. Wir haben uns auf dieser Seite für die "lighter"-Version entschieden.
+                    </p>
+                    <br>
+                    <p>Äußerst wichtig ist eine <b>max-width</b> zu setzen. Wir empfehlen eine Breite von <b>70-95ch.</b></p>
+                    <br>
+                    <ul>
+                        <li>Schriftart: <b>Open Sans, sans-serif, lighter-normal</b></li>
+                    </ul>
+                    <br>
+                    <b>Beispiele:</b>
+                    <br>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos suscipit asperiores? Fugit possimus officia maiores? Libero consequatur tempora expedita impedit debitis repudiandae nesciunt rem suscipit, iure minima neque qui saepe rerum eligendi culpa quae vitae porro quasi iste ipsam? Aspernatur pariatur, vel amet facere optio repellendus corrupti exercitationem voluptates sunt dolorem soluta nulla, velit in tempora provident ut totam.</p>
+                    <br>
+                    <p class="normalp">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae harum soluta ipsum nisi itaque laborum non veniam nobis at, blanditiis quo exercitationem autem sit perspiciatis est incidunt eum beatae voluptates libero! Eum, reiciendis quam cupiditate inventore cumque quisquam delectus asperiores eligendi hic debitis dolores suscipit excepturi officiis at a nobis perferendis alias obcaecati quasi voluptate eveniet, commodi, dolore dicta! Similique.
+                    </p>
+                </section>
+            </section>
         </div>
     </body>
 </html>
