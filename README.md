@@ -1,8 +1,9 @@
 # YouRadio
 
 YouRadio, a platform where you can create your own radio server and listen to music with your friends  
-  
-https://youradio.projects.multimediatechnology.at/  
+
+Portfolio: https://portfolio.fh-salzburg.ac.at/projects/2021-youradio   
+Projekt: https://youradio.projects.multimediatechnology.at/  
 
 ## Gruppe
 Valentin Kiefl
