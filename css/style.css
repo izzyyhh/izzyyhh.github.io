@@ -983,3 +983,134 @@ input[type=range]::-webkit-slider-runnable-track {
     color: #A9DBA8;
     font-weight: normal;
 }
+
+/* Memberliste */
+.memberlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #384750;
+    width: 230px;
+    height: 630px;
+    font-size: 0.8rem;
+}
+
+.memberlist__helper {
+    margin-left: 10px;  
+}
+
+.memberlist__name {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.239);
+    width: 210px;
+    text-align: left;
+    padding-left: 10px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.memberlist__add {
+    padding-right: 10px;
+    text-decoration: none;
+    color: #A9DBA8;
+    cursor: pointer;
+}
+
+.memberlist__current-user {
+    color: white;
+}
+
+.memberlist__search {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.239);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.memberlist__searchbar {
+    background-color: #1C1C1C;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.239);
+    width: 210px;
+    height: 50%;
+    border: none;
+    font-size: 0.7rem;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.memberlist__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: white;
+    overflow-y: scroll; 
+    margin-bottom: 20px;
+}
+
+.memberlist__current-text {
+    font-size: .9rem;
+    font-weight: bolder;
+}
+
+.memberlist__member-text {
+    font-size: .9rem;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.memberlist__user {
+    width: 100%;
+}
+.memberlist__user-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    padding:0;
+}
+
+.memberlist__userpic img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.memberlist__user-name {
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+
+.memberlist__user-name--color {
+    color: #A9DBA8;
+}
+
+.memberlist__list::-webkit-scrollbar {
+    display: none;
+}
+    
+/* Hide scrollbar for IE, Edge and Firefox */
+.memberlist__list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
