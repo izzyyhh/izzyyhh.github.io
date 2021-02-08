@@ -19,6 +19,7 @@
             <a href='#methodology'><h2 class="main-nav__headings">CSS-Methodologie</h2></a>
             <ul>
                 <li class="main-nav__content"><a href="#code-konventionen" class="main-nav__links">Code-Konventionen</a></li>
+                <li class="main-nav__content"><a href="#code-formatting" class="main-nav__links">Code-Formatierung</a></li>
                 <li class="main-nav__content"><a href="#class-konventionen" class="main-nav__links">Class-Naming-Konvention</a></li>
             </ul>
             <a href='#components'><h2 class="main-nav__headings">Component-Library</h2></a>
@@ -118,11 +119,51 @@
                 <b>Quelle:</b> <a href='http://getbem.com/introduction/'>http://getbem.com/introduction/</a>, <a href='https://de.wikipedia.org/wiki/Block,_Element,_Modifier'>https://de.wikipedia.org/wiki/Block,_Element,_Modifier</a>
                 </p>
                 <section id="code-konventionen">
-                    <h3 class="overview__sub-headings">Code-Naming-Konventionen</h3>
+                    <h3 class="overview__sub-headings">Code-Konventionen</h3>
                     <h4>Preprocessor, File-Struktur und CSS-Normalize</h4>
                     <p class="overview__text">Im Projekt YouRadio wird SASS/SCSS verwendet. Es wird das 7-1 Pattern angewandt um das SCSS zu strukturieren. Das bedeutet es
                             gibt die Ordner "base, components, layout, pages, themes, abstracts und vendors". Die Files werden dann in einer 
                             main.scss gesammelt.<br><br> Es wird CSS-Normalize angewandt um eine gemeinsame Basis für Styling zu schaffen.</p>
+                </section>
+                <section id='code-formatting'>
+                    <h3 class="overview__sub-headings">Code-Formatierung</h3>
+                    <p>
+                        <ul class="formatting-list">
+                            <li>Verwende Tabs (4 Abstände)</li>
+                            <li>Verwende Dashes (-) und Underscores (_) in Klassen-Namen, folge dabei der Naming Konvention (unten genau erklärt)</li>
+                            <li>Bei Verwendung von Kommentaren, verwende die Multiline-Variante, aber vermeide, dass sie über mehrere Zeilen gehen. So sind diese gut ersichtlich (/* comment */).</li>
+                            <li>Gib jedem CSS-Selektor eine eigene neue Zeile.</li>
+                            <li>Die Selektoren sollen durch eine leere Zeile getrennt sein.</li>
+                            <li>Mache einen Abstand nach der geschwungenen Klammer, das nach dem Klassennamen folgt: .klasse {}</li>
+                            <li>Nach dem Doppelpunkt, das nach dem Attribut folgt, soll ein Abstand sein: attribut: wert;</li>
+                        </ul>
+                        <br>
+                        <b>Beispiel:</b>
+                        <br>
+                        <br>
+<pre>
+.musicbar {
+    background-color: white;
+    color: black;
+}
+
+/* ich bin ein kommentar */
+.musicbar__play-btn {
+    cursor: pointer;
+}
+
+.eins,
+.zwei,
+.drei {
+    ...
+}
+
+</pre>
+                    <p>Inspiriert von "airbnb". Leicht verändert.
+                     <br>
+                     <br>
+                     <a href="https://github.com/airbnb/css">airbnb css</a>
+                    </p>
                 </section>
                 <section id="class-konventionen">
                     <h3 class="overview__sub-headings">Class-Naming-Konventionen</h3>

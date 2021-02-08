@@ -60,6 +60,13 @@ body {
     margin-right: 2.5rem;
 }
 
+ul.formatting-list {
+    line-height: 1.5rem;
+    margin-left: 2rem;
+    list-style-type: disc;
+    font-weight: lighter;
+}
+
 p {
     max-width: 92ch;
     font-weight: lighter;
