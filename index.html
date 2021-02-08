@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d892856dbe.js" crossorigin="anonymous"></script>
-        <title>Titel</title>
+        <title>YouRadio – Styleguide</title>
     </head>
     <body>
         <nav class="main-nav">
@@ -30,6 +30,10 @@
             </ul>
         </nav>
         <div class="overview">
+            <div class="logoheading">
+                <img src="images/radioquad.png" alt="youradio logo">
+                <h1>YOURADIO</h1>
+            </div>
             <section class="brandguide">
                 <h2 class="overview__headings">Brandguide YouRadio</h2>
                 <p class="overview__text">YouRadio ist eine Applikation, in der man sich seinen eigenen “Radiosender”
@@ -41,7 +45,7 @@
                     <h3 class="overview__sub-headings">Einleitung</h3>
                     <p class="overview__text">Dies ist der Styleguide für das Web-Projekt YouRadio. Er beinhaltet neben den zu wählenden Farben, auch
                     Beschreibungen der anzuwendenden CSS-Methodologie und deren Class-Naming-Konvention. 
-                    Des Weiteren werden Code- und styling Beispiele von elementaren Komponenten dargestellt.
+                    Des Weiteren werden Code- und Styling Beispiele von elementaren Komponenten dargestellt.
                     </p>
                 </section>
                 <section id="farben">
@@ -51,32 +55,32 @@
                         <div class="colors__container">
                             <span class="colors__dot colors__dot--color0"></span>
                             <h4 class="colors__heading">#1C1C1C</h4>
-                            <p class="colors__text">Diese Farbe wird für die Navigation in der Serverleiste, sowie in der Musik-Playbar verwendet</p>
+                            <p class="colors__text">Diese Farbe wird für dunkle Hintergründe verwendet. Als Beispiel ist die Navigation in der Serverleiste, sowie die Musik-Playbar zu erwähnen. Kann auch für die Fonts auf hellem Hintergrund verwendet werden.</p>
                         </div>
                         <div class="colors__container">
                             <span class="colors__dot colors__dot--color1"></span>
                             <h4 class="colors__heading">#20262A</h4>
-                            <p class="colors__text">Diese Farbe wird für Hintergründe in Chat und Buttons verwendet</p>
+                            <p class="colors__text">Diese Farbe eignet sich für einen helleren Hintergrund (sowie auf dieser Seite ersichtlich ist), um für Variation und Trennung von Komponenten zu sorgen. Beispiel im Projekt: Chat und Buttons</p>
                         </div>
                         <div class="colors__container">
                             <span class="colors__dot colors__dot--color2"></span>
                             <h4 class="colors__heading">#384750</h4>
-                            <p class="colors__text">Diese Farbe wird für Hintergründe in Seitenmenüs verwendet</p>
+                            <p class="colors__text">Eine weitere Hintergrundfarbe, die meist in Seitenmenüs verwendet wird. </p>
                         </div>
                         <div class="colors__container">
                             <span class="colors__dot colors__dot--color3"></span>
                             <h4 class="colors__heading">#26849A</h4>
-                            <p class="colors__text">Diese Farbe wird für Usernamen im Chat verwendet</p>
+                            <p class="colors__text">Eine Akzentfarbe, die auf wichtige Elemente des Interface deutet. Anzuwenden auf Buttons, Usernamen, Statusüberschriften.</p>
                         </div>
                         <div class="colors__container">
                             <span class="colors__dot colors__dot--color4"></span>
                             <h4 class="colors__heading">#A9DBA8</h4>
-                            <p class="colors__text">Diese Farbe wird für klickbare Elemente</p>
+                            <p class="colors__text">Die wichtigste Akkzentfarbe, die Aktionen im Interface auffällig macht. Anzuwenden auf sehr wichtige Elemente im Interface, meist auf klickbare Elemente (auch Icons).</p>
                         </div>
                         <div class="colors__container">
                             <span class="colors__dot colors__dot--color5"></span>
                             <h4 class="colors__heading">#C9C9C9</h4>
-                            <p class="colors__text">Diese Farbe wird für Texte die "ausgegraut" sind verwendet</p>
+                            <p class="colors__text">Diese Farbe wird für Texte die, "ausgegraut" sind verwendet</p>
                         </div>
                         <div class="colors__container">
                             <span class="colors__dot colors__dot--color6"></span>
@@ -99,14 +103,16 @@
                 <p class="overview__text">
                 Wir verwenden BEM, zum Einen aufgrund der Modularität, denn bei der BEM-Struktur wird nur mit Klassen gearbeitet und die verwendeten Blöcke sind nie voneinander abhängig. Dementsprechend kommt es zu keinen Problemenen mit Cascading und Spezifität. Die Unabhängigkeit der Blöcke
                 macht den Code wiederverwendbar und wartbarer. Zuletzt ist die BEM-Struktur sehr einfach zu verstehen und einzusetzen.
-                Quelle: http://getbem.com/introduction/ , https://de.wikipedia.org/wiki/Block,_Element,_Modifier
+                <br>
+                <br>
+                <b>Quelle:</b> <a href='http://getbem.com/introduction/'>http://getbem.com/introduction/</a>, <a href='https://de.wikipedia.org/wiki/Block,_Element,_Modifier'>https://de.wikipedia.org/wiki/Block,_Element,_Modifier</a>
                 </p>
                 <section id="code-konventionen">
                     <h3 class="overview__sub-headings">Code-Naming-Konventionen</h3>
                     <h4>Preprocessor, File-Struktur und CSS-Reset</h4>
                     <p class="overview__text">Im Projekt YouRadio wird SASS/SCSS verwendet. Es wird das 7-1 Pattern angewandt um das SCSS zu strukturieren. Das bedeutet es
                             gibt die Ordner "base, components, layout, pages, themes, abstracts und vendors". Die Files werden dann in einer 
-                            main.scss gesammelt. Es wird CSS-Normalize angewandt um eine gemeinsame Basis für Styling zu schaffen.</p>
+                            main.scss gesammelt.<br><br> Es wird CSS-Normalize angewandt um eine gemeinsame Basis für Styling zu schaffen.</p>
                 </section>
                 <section id="class-konventionen">
                     <h3 class="overview__sub-headings">Class-Naming-Konventionen</h3>
@@ -133,7 +139,7 @@
                         </tr>
                         <tr>
                             <td class="naming-table__data">Beispiel: <code>.block</code></td>
-                            <td class="naming-table__data">Beispiel: <code>&ltsection class="feed">&lt/section></code></td>
+                            <td class="naming-table__data">Beispiel: <code>&lt;section class="feed">&lt;/section></code></td>
                             <td class="naming-table__data">Beispiel: <code>.feed { color:green;}</code></td>
                         </tr>
                     </table>
@@ -158,7 +164,7 @@
                         </tr>
                         <tr>
                             <td class="naming-table__data">Beispiel: <code>.feed__post</code></td>
-                            <td class="naming-table__data">Beispiel: <code>&ltsection class="feed">&ltdiv class="feed__post">&lt/div>&lt/section></code></td>
+                            <td class="naming-table__data">Beispiel: <code>&lt;section class="feed">&lt;div class="feed__post">&lt;/div>&lt;/section></code></td>
                             <td class="naming-table__data">Beispiel: <code>.feed__post { color:green;}</code></td>
                         </tr>
                     </table>
@@ -186,7 +192,7 @@
                                 Beispiel: <code>.feed__post--color-blue</code>
                             </td>
                             <td class="naming-table__data">
-                                Beispiel: <code>&ltsection class="feed">&ltdiv class="feed__post--color-blue">&lt/div>&lt/section></code>
+                                Beispiel: <code>&lt;section class="feed">&lt;div class="feed__post--color-blue">&lt;/div>&lt;/section></code>
                             </td>
                             <td class="naming-table__data">
                                 Beispiel: <code>.feed__post--color-blue { color:green;} </code> 
@@ -314,7 +320,7 @@
                         <div class="chat__message">Chat-MessageChat-MessageChat-MessageChat-MessageChat-MessageChat-Message</div>
                         <div class="chat__user"><span class="chat__img"></span><span class="chat__username">Username</span></div>
                         <div class="chat__message">Chat-Message</div>
-                        <input type="text" class="chat__add" value="Type Text"></input>
+                        <input type="text" class="chat__add" value="Type Text">
                     </div>
                     <p class="overview__text">Bei der Chat-Section ist es wichtig auf den Einsatz der Fraben zu achten. Die grauen Kreise werden mit den Bildern der User gefüllt. Die Input-Leiste reagiert auf "Enter"</p>
                     <div class="codepen">
@@ -326,7 +332,6 @@
                                   <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
                     </div>
                 </section>                
-            </section>
         </div>
     </body>
 </html>

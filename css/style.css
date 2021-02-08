@@ -1,5 +1,8 @@
-/*Normalize*/
+/*Fonts*/
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rokkitt:wght@400;700;800;900&display=swap');
+
+/*Normalize*/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
     margin:0;
     padding:0;
@@ -42,16 +45,66 @@ html {
 }
 
 body {
+    background-color: #20262A;
+    color: whitesmoke;
     display: flex;
     flex-direction: row;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .overview {
     display: flex;
     flex-direction: column;
-    margin-left: 22rem;
-    margin-right: 2rem;
+    margin-left: 23rem;
+}
+
+p {
+    max-width: 92ch;
+    font-weight: lighter;
+}
+
+h1 {
+    font-family: 'Rokkitt', serif;
+    color: #A9DBA8;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.logoheading {
+    margin-bottom: -2rem;
+    padding-top: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.logoheading img {
+    margin-right: 1rem;
+    width: 150px;
+    height: 150px;
+}
+
+section > h2 {
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+h4 {
+    font-style: italic;
+    margin-top: -14px;
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: white;
+    font-weight: lighter;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /*--------------------------------------------*/
@@ -59,23 +112,34 @@ body {
 /* Nav */
 
 .main-nav {
-    background-color: #384750;
+    background-color: #1C1C1C;
     color:white;
     width: 20rem;
     padding-top: 30px;
     height: 100vh;
     position: fixed;
-
 }
+
+.main-nav ul{
+    margin-bottom: 2rem;
+}
+
 
 .main-nav__links {
     color: white;
+    font-weight: lighter;
 }
 
 .main-nav__headings {
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: .8rem;
+}
+
+.main-nav__links:hover {
+    text-decoration: underline;
 }
 
 .main-nav__content {
@@ -89,20 +153,18 @@ body {
 /* Main */
 
 .overview__headings {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 1.3rem;
 }
 
 .overview__sub-headings {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .overview__text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
     line-height: 1.5;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -119,21 +181,23 @@ body {
 }
 
 .colors__container {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin-top: 20px;
 }
 
 .colors__heading {
-    margin-top: auto;
-    margin-bottom: auto;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0 1rem;
+    width: 100px;
 }
 
 .colors__text {
-    margin-top: auto;
-    margin-bottom: auto;
-    min-width: 70%;
+    max-width: 50ch;
+    margin-left: 2rem;
 }
 
 .colors__dot {
@@ -181,7 +245,7 @@ body {
 /* Naming Konventionen */
 
 .naming-table {
-    background-color:#C9C9C9;
+    background-color:#384750;
     table-layout: fixed;
     width: 100%;
     height: 250px;
@@ -193,7 +257,8 @@ body {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    border-left:3px solid #384750;
+    border-left:3px solid #1C1C1C;
+    font-size: 1.2rem;
 }
 
 .naming-table__data {
@@ -202,7 +267,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
+    font-weight: initial;
     line-height: 1.5;
 
 }
