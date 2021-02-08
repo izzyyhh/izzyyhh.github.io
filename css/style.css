@@ -109,6 +109,10 @@ h1 {
     height: 150px;
 }
 
+.grid-layout-img {
+    width: 100%;
+}
+
 section > h2 {
     font-family: 'Open Sans';
     font-weight: bold;
@@ -152,6 +156,10 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.h1-link:hover {
+    text-decoration: none;
 }
 
 /*--------------------------------------------*/

@@ -38,12 +38,16 @@
                 <li class="main-nav__content"><a href="#typography-h" class="main-nav__links">Überschriften</a></li>
                 <li class="main-nav__content"><a href="#typography-p" class="main-nav__links">Paragraphen</a></li>
             </ul>
+            <a href='#layout'><h2 class="main-nav__headings">Layout</h2></a>
+            <ul>
+                <li class="main-nav__content"><a href="#grid" class="main-nav__links">Grid</a></li>
+            </ul>
         </nav>
 
         <div class="overview">
             <div class="logoheading">
-                <img src="images/radioquad.png" alt="youradio logo">
-                <h1>YOURADIO</h1>
+                <a class="h1-link" href="https://youradio.projects.multimediatechnology.at/"><img src="images/radioquad.png" alt="youradio logo"></a>
+                <a class="h1-link" href="https://youradio.projects.multimediatechnology.at/"><h1>YOURADIO</h1></a>
             </div>
 
             <section class="brandguide" id='brandguide'>
@@ -420,7 +424,7 @@
                     <br>
                     <div class="topbar">
                         <div class="topbar__user">
-                                <div class="topbar__userpic"><img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256_960_720.png"></div>
+                                <div class="topbar__userpic"><img alt="profile pic" src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256_960_720.png"></div>
                             <span>izzy</span>
                             <div class="topbar__actions">
                                 <a href="#topbar"><i class="fas fa-cog" aria-hidden="true"></i></a>
@@ -553,6 +557,79 @@
                     <p class="normalp">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae harum soluta ipsum nisi itaque laborum non veniam nobis at, blanditiis quo exercitationem autem sit perspiciatis est incidunt eum beatae voluptates libero! Eum, reiciendis quam cupiditate inventore cumque quisquam delectus asperiores eligendi hic debitis dolores suscipit excepturi officiis at a nobis perferendis alias obcaecati quasi voluptate eveniet, commodi, dolore dicta! Similique.
                     </p>
+                </section>
+            </section>
+            <section id="layout">
+                <h2 class="overview__headings">Layout</h2>
+                <p>In Sachen Layout empfehlen wir, ein Grid zu verwenden. Im Folgenden wird das Grid-Layout in diesem Projekt genauer erläutert und es werden 2 wichtige Variante aufgelistet.</p>
+                <section id="grid">
+                    <h3 class="overview__sub-headings">Grid</h3>
+                    <p>Die Seite vom Server hat das komplexeste Layout. Dort befinden sich fast alle Komponenten, die aufgelistet wurden. Insgesamt 6:</p>
+                    <br>
+                    <ul>
+                        <li>Serverleiste</li>
+                        <li>Topbar</li>
+                        <li>Playlist</li>
+                        <li>Musikbar</li>
+                        <li>Chat</li>
+                        <li>Memberliste</li>
+                    </ul>
+                    <br>
+                    <p>Das Grid-Layout besteht aus 4 Spalten und 3 Zeilen. Verwenden sie folgenden Code.</p>
+<pre>
+
+.wrapper {
+    max-width: 2000px;
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "serverbar playlist topbar memberlist"
+                            "serverbar playlist chat memberlist"
+                            "serverbar musicbar musicbar musicbar";
+    grid-template-columns: 70px 230px 1fr 230px;
+    grid-template-rows: 50px 1fr 100px;
+}
+
+.serverbar {
+    grid-area: serverbar;
+}
+
+.playlist {
+    grid-area: playlist;
+}
+
+.topbar {
+    grid-area: topbar;
+}
+
+.memberlist {
+    grid-area: memberlist;
+}
+
+.chat {
+    grid-area: chat;
+    height: 100%;
+}
+
+.musicbar {
+    grid-area: musicbar;
+}
+
+.home {
+    grid-area: home;
+}
+
+
+
+</pre>
+                    <p>Es folgt ein Bild vom Endergebnis: </p>
+                    <br>
+                    <img class="grid-layout-img" src="images/layout-server.PNG" alt="grid layout">
+                    <br>
+                    <p>Anmerkung: Der Musiktitel in der Musikbar ist nicht abgeschnitten, sondern ein "rolling"-Text.</p>
                 </section>
             </section>
         </div>
