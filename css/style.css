@@ -1114,3 +1114,46 @@ input[type=range]::-webkit-slider-runnable-track {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+/* Topbar */
+.topbar {
+    height: 50px;
+    background-color: #384750;
+}
+
+.topbar a,
+.topbar a:nth-child(1) {
+    font-size: 1.2rem;
+    color: #A9DBA8;
+    margin-left: .2rem;
+}
+
+.topbar__user {
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.topbar__user span {
+    margin-left: .5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.topbar__userpic {
+    height: 38px;
+    width: 38px;
+}
+
+.topbar__userpic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.topbar__actions {
+    margin-left: .5rem;
+}
